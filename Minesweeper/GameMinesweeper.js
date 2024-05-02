@@ -64,12 +64,13 @@ function setFlag() {
     }
     else {
         flagEnabled = true;
-        document.getElementById("flag-button").style.backgroundColor = "darkgray";
+        document.getElementById("flag-button").style.backgroundColor = "orange";
     }
 }
 
 function clickTile() {
     if (gameOver || this.classList.contains("tile-clicked")) {
+        alert("haha");
         return;
     }
 

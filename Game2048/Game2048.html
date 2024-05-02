@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>2048</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="2048.css">
         <link rel="stylesheet" href="../heading.css">
         <script src="2048.js"></script>
@@ -35,22 +36,56 @@
 
         <h1>2048</h1>
         <hr>
-        <h2>Score: <span id="score">0</span></h2>
+
+        <div id="container">
+            <div class="col col1">
+                <h2>Score: <span id="score">0</span></h2>
+                <div id="board"></div>
+            </div>
+            <div class="col col2">
+                <div id="move" style="display: none;">
+                    <button class="bt_move up" onclick="move_up()">
+                        <i class='bx bx-chevron-left bx-rotate-90' ></i>
+                    </button>
+                    <button class="bt_move right" onclick="move_right()">
+                        <i class='bx bx-chevron-left bx-rotate-180' ></i>
+                    </button>
+                    <button class="bt_move down" onclick="move_down()">
+                        <i class='bx bx-chevron-left bx-rotate-270' ></i>
+                    </button>
+                    <button class="bt_move left" onclick="move_left()">
+                        <i class='bx bx-chevron-left' ></i>
+                    </button>
+                </div>
+                <button class="button Switch_Key" onclick="SwitchKey()">Switch Key</button>
+                <button class="button Reload" onclick="Reload()">Reload</button>
+                <button class="button Back" onclick="chuyenDenTrangChu()">Back</button>
+            </div>
+        </div>
         
-        <button class="button" onclick="Reload()">Reload</button>
+
         <script>
             function Reload() {
                 location.reload();
             }
-            </script>
+        </script>
         
-        <button class="button" onclick="chuyenDenTrangChu()">Back</button>
         <script>
             function chuyenDenTrangChu() {
                 window.location.href = '../index.html';
             }    
         </script>
+
+        <script>
+            function SwitchKey() {
+                var Switch = document.querySelector("#move");
+                if (Switch.style.display === 'none') {
+                    Switch.style.display = 'grid';
+                } else {
+                    Switch.style.display = 'none';
+                }
+            }
+        </script>
             
-        <div id="board"></div>
     </body>
 </html>

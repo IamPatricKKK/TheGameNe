@@ -43,8 +43,8 @@
     color: #010059;
 }
 .Game1 img:hover{
-    height: 230px;
-    width: 230px;
+    height: 240px;
+    width: 240px;
 }
 
 .container_2{
@@ -74,14 +74,14 @@
     height: auto;
     border-radius: 30px;
 
-    transition-property: width, border-radius;
-    transition-duration: 400ms;
+    /* transition-property: width, border-radius;
+    transition-duration: 400ms; */
+    transition: transform 300ms;
 
     border: 1px solid #000;
 }
 .Game2 img:hover{
-    width: 65%;
-    border-radius: 15px;
+    transform: scale(1.2);
 }
 
 
@@ -104,9 +104,41 @@ ul{
 }
 
 
+@media only screen and (max-width: 24.26em){
+    .Game1 h2{
+        font-size: 20px;
+    }
+    .div_menu_game1{
+        padding: 0px 10px;
+    }
+    .Game1 img{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+    }
+    .Game1 img:hover{
+        height: 60px;
+        width: 60px;
+    }
+    .Game1 p{
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    
+    .Game2{
+        padding-bottom: 50px;
+    }
+    .Game2 h2{
+        font-size: 20px;
+    }
+    .Game2 img{
+        border-radius: 15px;
+    }
+}
 
 /* Mobile: width < 740px */
-@media only screen and (max-width: 64.1875em){
+@media only screen and (min-width: 24.26em) and (max-width: 64.1875em){
     .Game1 h2{
         font-size: 20px;
     }
@@ -118,10 +150,15 @@ ul{
         height: 100px;
         margin: 10px;
     }
+    .Game1 img:hover{
+        height: 110px;
+        width: 110px;
+    }
     .Game1 p{
         font-size: 10px;
         margin-bottom: 10px;
     }
+
     
     .Game2{
         padding-bottom: 50px;
@@ -138,7 +175,6 @@ ul{
 @media only screen and (min-width: 64.25em) and (max-width: 63.9375em){
     
 }
-
 
 
 

@@ -72,6 +72,28 @@ document.addEventListener('keyup', (e) => {
     document.getElementById("score").innerText = score;
 })
 
+function move_up(){
+    slideUp();
+    setTwo();
+    document.getElementById("score").innerText = score;
+}
+function move_right(){
+    slideRight();
+    setTwo();
+    document.getElementById("score").innerText = score;
+}
+function move_down(){
+    slideDown();
+    setTwo();
+    document.getElementById("score").innerText = score;
+}
+function move_left(){
+    slideLeft();
+    setTwo();
+    document.getElementById("score").innerText = score;
+}
+
+
 function filterZero(row){
     return row.filter(num => num != 0); //create new array of all nums != 0
 }
@@ -187,3 +209,6 @@ function hasEmptyTile() {
     }
     return false;
 }
+
+
+
