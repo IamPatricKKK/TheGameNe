@@ -1,9 +1,17 @@
+let load = document.getElementById("loading");
+
 var board;
 var score = 0;
 var rows = 4;
 var columns = 4;
 
 window.onload = function() {
+    setTimeout(function(){
+        load.classList.add("loadingtransion");
+    }, 500);
+    setTimeout(function(){
+        load.style.display = 'none';
+    }, 800);
     setGame();
 }
 

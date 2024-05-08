@@ -1,3 +1,5 @@
+let load = document.getElementById("loading");
+
 let board = [];
 let rows = 8;
 let columns = 8;
@@ -11,6 +13,12 @@ let flagEnabled = false;
 let gameOver = false;
 
 window.onload = function() {
+    setTimeout(function(){
+        load.classList.add("loadingtransion");
+    }, 500);
+    setTimeout(function(){
+        load.style.display = 'none';
+    }, 800);
     startGame();
 }
 

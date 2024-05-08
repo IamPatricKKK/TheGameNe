@@ -1,3 +1,4 @@
+let load = document.getElementById("loading");
 let a = document.getElementById("game");
 let option = a.className;
 
@@ -53,12 +54,19 @@ shuffleArray(arrayG, moves);
 // console.log("Mảng sau khi xáo trộn:");
 // console.log(arrayG);
 const imgOrder = arrayG.reduce((acc, curr) => [...acc, ...curr], []);
-console.log(imgOrder);
+// console.log(imgOrder);
 //--> mảng 4x4 đã được xáo trộn
 
 
 //bắt đầu trò chơi
 window.onload = function() {
+    setTimeout(function(){
+        load.classList.add("loadingtransion");
+    }, 2000);
+    setTimeout(function(){
+        load.style.display = 'none';
+    }, 2000);
+
     for (let r=0; r < rows; r++) {
         for (let c=0; c < columns; c++) {
 
@@ -79,10 +87,9 @@ window.onload = function() {
             tile.addEventListener("click", handleClick);
 
             document.getElementById("board").append(tile);
-
         }
     }
-    document.addEventListener("keydown", handleKeyPress);
+    // document.addEventListener("keydown", handleKeyPress);
 }
 
 //xử lí khi chơi click
@@ -125,8 +132,29 @@ function handleClick() {
       turns += 1;
       document.getElementById("turns").innerText = turns;
     }
+    kiemtra()
 }
-
+function kiemtra(){
+    var arr = Array.from({ length: 16 }, (_, i) => i + 1);
+    for(i = 0; i<4; i++){
+        for(j = 0; j<4; j++){
+            let a = document.getElementById(i+'-'+j);
+            if(!(a.src.includes(option + arr.shift() +".png"))){
+                return;
+            }
+        }
+    }
+    thongbao();
+}
+function thongbao(){
+    let tile = document.getElementById("End")
+    tile.style.zIndex = "1";
+    setTimeout(function(){
+        let tile = document.getElementById("End")
+        tile.classList.add("fade-in");
+        tile.style.opacity = "1";
+    }, 1000)
+}
 
 //xử lí khi chơi kéo thả
 function dragStart() {
@@ -180,4 +208,5 @@ function dragEnd() {
         turns += 1;
         document.getElementById("turns").innerText = turns;
     }
+    kiemtra();
 }

@@ -29,25 +29,30 @@
             </ul>
         </header>
 
+        <div class="loading" id="loading">
+            <img src="../transion/loading2.gif" alt="">
+        </div>
+
         <h1 id="game" class="ee/">Slide Puzzle Game 1</h1>
         
         <div id="container">
             <div class="col col1">
                 <h2>Turn: <span id="turns">0</span></h2>
                 <div id="board">
+                    <img id="End" src="picture/ee/win.png" alt="" style="height: 100%; width: 100%; opacity: 0; z-index: -1;">
                 </div>
             </div>
             <div class="col col2">
                 <img class="imgIn" src="picture/ee/win.png" alt="">
 
-                <button class="button" onclick="Reload()">Reload</button>
+                <button class="button reload" onclick="Reload()">Reload</button>
                 <script>
                     function Reload() {
                         location.reload();
                     }
                 </script>
                 
-                <button class="button" onclick="chuyenDenTrangChu()">Back</button>
+                <button class="button back" onclick="chuyenDenTrangChu()">Back</button>
                 <script>
                     function chuyenDenTrangChu() {
                         window.location.href = '../index.html';

@@ -5,12 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Minesweeper</title>
         <link rel="stylesheet" href="GameMinesweeper.css">
-        <script src="GameMinesweeper.js"></script>
         <link rel="stylesheet" href="../heading.css">
     </head>
-
+    
     <body>
-
+        
         <header id="heading">
             <div id="logo">
                 <a href="../index.html">GameNe</a>
@@ -30,9 +29,13 @@
                 </a></li>
             </ul>
         </header>
-
+        
         <div class="hone"></div>
-
+        
+        <div class="loading" id="loading">
+            <img src="../transion/loading2.gif" alt="">
+        </div>
+        
         <div id="container">
             <div class="col col1">
                 <h1>Mines: <span id="mines-count">0</span></h1>
@@ -43,21 +46,22 @@
             <div class="col col2">
                 <button class="button" onclick="Reload()">Reload</button>
                 <button class="button" onclick="chuyenDenTrangChu()">Back</button>
-                </div>
             </div>
         </div>
-
-        <script>
-            function Reload() {
-                location.reload();
-            }
+    </div>
+    
+    <script>
+        function Reload() {
+            location.reload();
+        }
         </script>
         
         <script>
             function chuyenDenTrangChu() {
                 window.location.href = '../index.html';
             }    
-        </script>
+            </script>
 
-    </body>
+    <script src="GameMinesweeper.js"></script>
+</body>
 </html>

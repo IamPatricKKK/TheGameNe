@@ -19,7 +19,7 @@ h1{
 }
 
 #board {
-    width: 400px;
+    width: 397px;
     height: 396px;
     border: 10px solid #6c6c6c;
     background-color: lightgray;
@@ -108,7 +108,50 @@ h1{
     background-color: #63afe9;
 }
 
+.loading{
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    position: fixed;
+    top: 55px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #396785; */
+    background-color: #282828;
+}
+.loading img{
+    width: 40rem;
+    position: absolute;
+}
+.loadingtransion{
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
 @media only screen and (max-width: 24.26em){
+    .loading{
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+        position: fixed;
+        top: 55px;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: #396785; */
+        background-color: #282828;
+    }
+    .loading img{
+        width: 100%;
+        position: absolute;
+    }
+    .loadingtransion{
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+    }
     #container{
         height: 80vh;
         display: grid;
@@ -116,7 +159,7 @@ h1{
         justify-items: center;
     }
     #board {
-        width: 213px;
+        width: 220px;
         height: 212px;
         border: 10px solid #6c6c6c;
         background-color: lightgray;
@@ -131,7 +174,7 @@ h1{
         height: 25px;
         border: 1px solid rgb(38, 38, 39);
     
-        /* text */
+        
         font-size: 20px;
         display: flex;
         justify-content: center;
@@ -155,14 +198,35 @@ h1{
     }
 }
 @media only screen and (min-width: 24.26em) and (max-width: 35.26em){
+    .loading{
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+        position: fixed;
+        top: 55px;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: #396785; */
+        background-color: #282828;
+    }
+    .loading img{
+        width: 100%;
+        position: absolute;
+    }
+    .loadingtransion{
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+    }
     #container{
-        height: 100vh;
+        height: 80vh;
         display: grid;
-        grid-template-columns: 60% 40%;
+        grid-template-columns: 100%;
         justify-items: center;
     }
     #board {
-        width: 213px;
+        width: 220px;
         height: 212px;
         border: 10px solid #6c6c6c;
         background-color: lightgray;
@@ -177,7 +241,7 @@ h1{
         height: 25px;
         border: 1px solid rgb(38, 38, 39);
     
-        /* text */
+        
         font-size: 20px;
         display: flex;
         justify-content: center;
@@ -186,7 +250,7 @@ h1{
         transition: transform 300ms;
     }
     .col2{
-        padding-top: 80px;
+        padding-top: 0px;
     }
     .button{
         height: 30px;
@@ -202,14 +266,14 @@ h1{
 }
 @media only screen and (min-width: 35.26em) and (max-width: 64.1875em){
     #container{
-        height: 100vh;
+        height: 80vh;
         display: grid;
-        grid-template-columns: 60% 40%;
+        grid-template-columns: 100%;
         justify-items: center;
     }
     #board {
-        width: 293px;
-        height: 292px;
+        width: 220px;
+        height: 212px;
         border: 10px solid #6c6c6c;
         background-color: lightgray;
     
@@ -219,11 +283,11 @@ h1{
         flex-wrap: wrap;
     }
     #board div {
-        width: 35px;
-        height: 35px;
+        width: 25px;
+        height: 25px;
         border: 1px solid rgb(38, 38, 39);
     
-        /* text */
+        
         font-size: 20px;
         display: flex;
         justify-content: center;
@@ -232,7 +296,7 @@ h1{
         transition: transform 300ms;
     }
     .col2{
-        padding-top: 80px;
+        padding-top: 0px;
     }
     .button{
         height: 30px;
@@ -249,5 +313,48 @@ h1{
 
 /* Tablet: width > 740px and width < 1024px */
 @media only screen and (min-width: 64.25em) and (max-width: 80.9375em){
+    #container{
+        height: 80vh;
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: center;
+    }
+    #board {
+        width: 220px;
+        height: 212px;
+        border: 10px solid #6c6c6c;
+        background-color: lightgray;
     
+        margin: 0 auto;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #board div {
+        width: 25px;
+        height: 25px;
+        border: 1px solid rgb(38, 38, 39);
+    
+        
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        transition: transform 300ms;
+    }
+    .col2{
+        padding-top: 0px;
+    }
+    .button{
+        height: 30px;
+        width: 100px;
+        font-weight: bold;
+        color: #004172;
+        font-size: 15px;
+        border-radius: 7px;
+        margin: 0px 20px;
+        margin-top: 20px;
+        background-color: #63afe9;
+    }
 }

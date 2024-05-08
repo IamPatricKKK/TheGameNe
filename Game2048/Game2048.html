@@ -7,11 +7,10 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="2048.css">
         <link rel="stylesheet" href="../heading.css">
-        <script src="2048.js"></script>
     </head>
-
+    
     <body>
-
+        
         <header id="heading">
             <div id="logo">
                 <a href="../index.html">GameNe</a>
@@ -31,12 +30,16 @@
                 </a></li>
             </ul>
         </header>
-
+        
+        <div class="loading" id="loading">
+            <img src="../transion/loading2.gif" alt="">
+        </div>
+        
         <div class="habon"></div>
-
+        
         <h1>2048</h1>
         <hr>
-
+        
         <div id="container">
             <div class="col col1">
                 <h2>Score: <span id="score">0</span></h2>
@@ -63,29 +66,30 @@
             </div>
         </div>
         
-
+        
         <script>
             function Reload() {
                 location.reload();
             }
-        </script>
+            </script>
         
         <script>
             function chuyenDenTrangChu() {
                 window.location.href = '../index.html';
             }    
-        </script>
+            </script>
 
-        <script>
-            function SwitchKey() {
-                var Switch = document.querySelector("#move");
-                if (Switch.style.display === 'none') {
-                    Switch.style.display = 'grid';
-                } else {
-                    Switch.style.display = 'none';
-                }
-            }
-        </script>
+<script>
+    function SwitchKey() {
+        var Switch = document.querySelector("#move");
+        if (Switch.style.display === 'none') {
+            Switch.style.display = 'grid';
+        } else {
+            Switch.style.display = 'none';
+        }
+    }
+    </script>
+    <script src="2048.js"></script>
             
     </body>
 </html>
