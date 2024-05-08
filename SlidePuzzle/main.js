@@ -48,7 +48,7 @@ const arrayG = [
     [13, 14, 15, 16]
 ];
 
-const moves = 250;
+const moves = 10;
 
 shuffleArray(arrayG, moves);
 // console.log("Mảng sau khi xáo trộn:");
